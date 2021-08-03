@@ -1,6 +1,6 @@
 # MonthlySlip
 A program that generates a monthly payment slip from the entered data.
-<br /> The source code (MonthlySlip.java) and a runnable MonthlySlip.exe would be provided. Just double click on MonthlySlip.exe to run the program, if using the source code, run the program on the IDE of the users' choice.
+<br /> The source code (MonthlySlip.java) and a runnable MonthlySlip.exe would be provided. Just double click on MonthlySlip.bat to run the program, if using the source code, run the program on the IDE of the users' choice.
 <br /> When prompted to enter the first name, please write a first name, only letters and hyphens are allowed.
 <br /> When prompted to enter the last name, please write a last name, only letters and hyphens are allowed.
 <br /> When prompted to enter the annual salary, please enter a positive integer, if a value is below zero, a double or a string then users would be prompted to enter the value again until you enter an acceptable value.
