@@ -155,7 +155,7 @@ public class MonthlySlip {
 
 		// Prints out all the entered and calculated value.
 		System.out.println("Full Name: " + firstName + " " + lastName + ", Pay period: " + payPeriod
-				+ ", Gross Income: $" + Math.round(grossIncome) + ", Tax: $" + Math.round(tax) + ", Net Income: $"
+				+ ", Gross Income: $" + Math.round(grossIncome) + ", Income Tax: $" + Math.round(tax) + ", Net Income: $"
 				+ Math.round(netIncome) + ", Super: $" + Math.round(supe) + "." + "\n");
 		
 		/*
