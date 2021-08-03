@@ -6,7 +6,11 @@ import java.util.regex.Pattern;
 
 public class MonthlySlip {
 	public static void main(String[] args) {
-
+		
+		boolean runAgain = true; 
+				
+		while(runAgain) {
+		
 		// Reads the user input.
 		Scanner input = new Scanner(System.in);
 
@@ -15,6 +19,7 @@ public class MonthlySlip {
 		String lastName;
 		String paymentStartDate; // Can also use the date variable by importing java.util.date but we are using string for simplicity sake.
 		String payPeriod; // Can also be date variable
+		String yesOrNo;
 		int annualSalary = 0; // Can also be a double if cents are used.
 		double tax;
 		double grossIncome;
@@ -22,7 +27,7 @@ public class MonthlySlip {
 		double superRate = 0;
 		double supe;
 		boolean error = false; // For the do while try catch loop to stop errors from stopping the program.
-
+		
 		/*
 		 * A GUI can also be created here with labels and text field for each required
 		 * input. One button to calculate and another to quit. If an error occur a
@@ -30,12 +35,12 @@ public class MonthlySlip {
 		 */
 
 		// Ask the user to enter their first name then save it.
-		System.out.println("Please enter your first name: ");
+		System.out.println("Please enter a first name: ");
 
 		// Loops until the user enter letters and hyphens only into the first name.
 		while (!Pattern.matches("[a-zA-Z-]+", firstName = input.nextLine())) {
 			System.out.println("Please enter a valid first name!");
-			System.out.println("Please enter your first name: ");
+			System.out.println("Please enter a first name: ");
 		}
 
 		// Ask the user to enter their last name then save it.
@@ -44,7 +49,7 @@ public class MonthlySlip {
 		// Loops until the user enter letters and hyphens only into the last name.
 		while (!Pattern.matches("[a-zA-Z-]+", lastName = input.nextLine())) {
 			System.out.println("Please enter a valid last name!");
-			System.out.println("Please enter your last name: ");
+			System.out.println("Please enter a last name: ");
 		}
 
 		// Ask the user to enter their salary then save it.
@@ -54,15 +59,16 @@ public class MonthlySlip {
 			error = false;
 			try {
 
-				System.out.println("Please enter your annual salary: ");
-				// Loops until a value greater than -1 has been entered
+				System.out.println("Please enter annual salary: ");
+				// Loops until a value greater than -1 has been entered.
+				// Use Math.round if a double is used.
 				while ((annualSalary = input.nextInt()) < 0) {
 					System.out.println("Please enter a positive integer!");
 					System.out.println("Please enter your annual salary: ");
 				}
 			} catch (InputMismatchException e) {
 				// Error message when wrong input is entered
-				System.out.println("Please input an intger!");
+				System.out.println("Please input an integer!");
 				error = true;
 				input.next();
 			}
@@ -108,7 +114,7 @@ public class MonthlySlip {
 		// Asks the user to input the date.
 		// Can also use a function to ask the starting date and then the ending date and
 		// also use a loop to only accept dates.
-		System.out.println("Please enter your payment start date, month of: ");
+		System.out.println("Please enter payment start date, month of: "); //Can also let user enter eg. 05 Jan/Mar then concentate into 31 Jan/Mar
 		input.nextLine(); // consumes the next line
 		paymentStartDate = input.nextLine();
 
@@ -150,11 +156,22 @@ public class MonthlySlip {
 		// Prints out all the entered and calculated value.
 		System.out.println("Full Name: " + firstName + " " + lastName + ", Pay period: " + payPeriod
 				+ ", Gross Income: $" + Math.round(grossIncome) + ", Tax: $" + Math.round(tax) + ", Net Income: $"
-				+ Math.round(netIncome) + ", Super: $" + Math.round(supe) + ".");
-
+				+ Math.round(netIncome) + ", Super: $" + Math.round(supe) + "." + "\n");
+		
 		/*
 		 * Data can be stored into a database using JSON. "Employees:" { { "First Name"
 		 * : firstName, ... "Super: $" : supe } }
 		 */
+		// Loops if user types YES, Y or Yes, exits the loop if user types no, exit, quit ... etc. 
+		System.out.print("Would you like to generate another monthly slip? y/n?");
+		yesOrNo = input.nextLine();
+		if (yesOrNo.toLowerCase().contains("y")) {
+			runAgain = true;
+		}
+		else {
+			runAgain = false;
+		}
+		}
+		
 	}
 }
