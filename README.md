@@ -1,5 +1,5 @@
 # MonthlySlip
-A program that generates a monthly payment slip from the entered data. The source code and an executable will be provided. A version with encapsulation and working aws would be provided if they are completed. 
+A program that generates a monthly payment slip from the entered data. The source code and an executable will be provided. A version with encapsulation and working aws would be provided if they are completed. Please ignore the MonthlySlip.java.
 
 <br /> Assumptions made:
 1. Names must only be letters and hyphens
