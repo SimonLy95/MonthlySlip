@@ -17,13 +17,12 @@ A program that generates a monthly payment slip from the entered data. The sourc
 4. type the character y to continue generating more cvs
 5. type anything else without including the character y to terminate the program
 
-<br />This version is running on old code.
-Instructions to run the executable:
+<br /> Note: this version is running on old code. Instructions to run the executable:
 1. Download the entire package
 2. Go into MonthlySlipExecutable file
 3. Double click on the MonthlySlip.bat
 
-<br /> Instructions to run the src file (MonthlySlipSimple/MonthlySlip):
+<br /> Note: MonthlySlip version. Instructions to run the src file (MonthlySlipSimple/MonthlySlip):
 1. Download the entire package
 2. Open your IDE of choice
 3. Click file
@@ -31,7 +30,7 @@ Instructions to run the executable:
 5. Navigate to EmployeeMonthlySlipSimple folder
 6. Then go from src>main>java>EmployeeMonthlySlipSimple
 
-<br /> Instructions to run aws version:
+<br /> Note: aws version does currently not working, currently trying to learn it. Instructions to run aws version:
 1. Would be a different repository
 2. A link would be provided if working
 3. Currently stuck on pipeline phase, source > build working but not deploy.
