@@ -39,7 +39,7 @@ A program that generates a monthly payment slip from the entered data. The sourc
 
 
 <br /> Notes:
-1. Made with eclipse and IntelliJ using Java version 16 and 11 depending on which file.
+1. Made with eclipse and IntelliJ using Java version 16 and 11 depending on which file. Java 16 is recommended for MonthlySlipSimple.
 2. The aws version is not working at the moment, currently trying to aws and spring. Currently stuck on pipeline phase, source > build working but not deploy.
 3. The executable version is running on old code. 
 4. If the user wants to store data into a database, JSON can be an option.
