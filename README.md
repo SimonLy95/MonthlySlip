@@ -3,6 +3,13 @@ A program that generates a monthly payment slip from the entered data. The sourc
 
 <br /> There are multiple versions of the program. One is an executable, one is java with a singular class (MonthlySlipSimple), one with encapsulation (MonthlySlip) and an AWS version. 
 
+<br />Instructions on how to use the program:
+1. Execute the program
+2. Follow the prompts
+3. A cvs would be generated in the end
+4. type the character y to continue generating more cvs
+5. type anything else without including the character y to terminate the program
+
 <br />Instructions to run the executable:
 1. Download the entire package
 2. Go into MonthlySlipExecutable file
