@@ -37,6 +37,7 @@ A program that generates a monthly payment slip from the entered data. The sourc
 1. Would be a different repository
 2. A link would be provided if working
 
+
 <br /> Notes:
 1. Made with eclipse and IntelliJ using Java version 16 and 11 depending on which file.
 2. The aws version is not working at the moment, currently trying to aws and spring. Currently stuck on pipeline phase, source > build working but not deploy.
@@ -50,5 +51,5 @@ A program that generates a monthly payment slip from the entered data. The sourc
 10. If the user wish to type '%9' for super rate, the program could include superRate.replace("%","") then parse the string into a double.
 11. Loops for incorrect inputs was added to stop the program to terminate itself if a user put the wrong data type into a field. The loops were also made to let users to continue entering data till completion.
 
-### <br />*Thank you for the opportunity, take care.*
+### <br />*Please contact me if there is any trouble on running the code. Thank you for the opportunity, take care!*
 
