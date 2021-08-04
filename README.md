@@ -25,12 +25,13 @@ A program that generates a monthly payment slip from the entered data. The sourc
 <br /> Note: MonthlySlip version. Instructions to run the src file (MonthlySlipSimple/MonthlySlip):
 1. Download the entire package
 2. Open your IDE of choice
-3. Extract MonthlySlipSimple into source root
+3. Extract MonthlySlipSimple into source root (optional)
 4. Click file
 5. Click open
 6. Navigate to EmployeeMonthlySlipSimple folder
 7. Then go from src>main>java>EmployeeMonthlySlipSimple
-8. Use the run function on the IDE (Some IDEs may require additional configurations)
+8. Some IDEs would require to build project and select Java version
+9. Use the run function on the IDE (Some IDEs may require additional configurations)
 
 <br /> Instructions to run aws version:
 1. Would be a different repository
