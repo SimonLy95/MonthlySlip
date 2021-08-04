@@ -44,8 +44,8 @@ A program that generates a monthly payment slip from the entered data. The sourc
 7. Payment period can use dates considering leap years with java.util.Date. A prompt could also be made to ask the day, the month, then the year for start date and end date.
 8. "Full Name:", "Income Tax:" and so forth was added for user clarity.
 9. Encapsulation can be used for each individual field then call for every data at the end with Employee e1 = new Employee() for JSON could be added. A single class was used due to time constraints. 
-10. If the user wish to type %9 for super rate, the program could include superRate.replace("%","") then parse the string into a double.
-11. A loop for incorrect inputs was added to stop the program to terminate itself if a user put the wrong data type into a field and to let users to continue entering data till completion.
+10. If the user wish to type '%9' for super rate, the program could include superRate.replace("%","") then parse the string into a double.
+11. Loops for incorrect inputs was added to stop the program to terminate itself if a user put the wrong data type into a field. The loops were also made to let users to continue entering data till completion.
 
 ### <br />*Thank you for the opportunity, take care.*
 
