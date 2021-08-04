@@ -110,7 +110,7 @@ public class MonthlySlip {
 					// Can use superRate.replace("%","") if accepting superRate as a string.
 					while ((superRate = input.nextDouble()) < 0 || superRate > 50) {
 						System.out.println("Please enter a value between 0 and 50 inclusive!");
-						System.out.println("Please enter super rate:");
+						System.out.println("Please enter super rate (%):");
 					}
 				} catch (InputMismatchException e) {
 					System.out.println("Please only enter numbers!");
@@ -181,7 +181,7 @@ public class MonthlySlip {
 			// Loops if user types YES, Y or Yes, exits the loop if user types no, exit,
 			// quit ... etc. The user could also just exit the window.
 			// Loop can be made to only accept yes or no.
-			System.out.print("Would you like to generate another monthly slip? y/n?");
+			System.out.print("Would you like to generate another monthly slip? y/n?" + "\n");
 			yesOrNo = input.nextLine();
 			if (yesOrNo.toLowerCase().contains("y")) {
 				runAgain = true;
