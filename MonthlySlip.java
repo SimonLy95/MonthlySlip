@@ -140,9 +140,9 @@ public class MonthlySlip {
 			 * the entire month.
 			 */
 			if (paymentStartDate.toLowerCase().contains("jan")) {
-				payPeriod = "01 January - 31 January"; // Date can also be used
+				payPeriod = "01 January - 31 January"; // Date can also be used.
 			} else if (paymentStartDate.toLowerCase().contains("feb")) { 
-				payPeriod = "01 Febuary - 28 Febuary";
+				payPeriod = "01 Febuary - 28 Febuary"; // Can add something to consider leap years.
 			} else if (paymentStartDate.toLowerCase().contains("mar")) {
 				payPeriod = "01 March - 31 March";
 			} else if (paymentStartDate.toLowerCase().contains("apr")) {
