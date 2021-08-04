@@ -1,4 +1,4 @@
-
+// This version is inferior
 // Made by Simon Ly.
 /*
 Assumptions made: 
