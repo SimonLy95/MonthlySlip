@@ -51,5 +51,5 @@ A program that generates a monthly payment slip from the entered data. The sourc
 10. If the user wish to type '%9' for super rate, the program could include superRate.replace("%","") then parse the string into a double.
 11. Loops for incorrect inputs was added to stop the program to terminate itself if a user put the wrong data type into a field. The loops were also made to let users to continue entering data till completion.
 
-### <br />*Please contact me if there is any trouble on running the code. Thank you for the opportunity, take care!*
+### <br />*Please contact me if there is any trouble on running the code. Thank you for the opportunity and take care!*
 
