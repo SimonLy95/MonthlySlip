@@ -4,6 +4,7 @@
 Assumptions made: 
 Names must only be letters and hyphens.
 Slips are generated for the entire month.
+Super rate is a double.
 Users may want to repeat for more than one person.
 */
 import java.util.InputMismatchException;
@@ -106,6 +107,7 @@ public class MonthlySlip {
 					System.out.println("Please enter super rate (%):"); // Maybe can let a user put in a % symbol then
 																		// remove it and parse it back as a double
 					// Loop until the user enter a value between 0 and 50.
+					// Can use superRate.replace("%","") if accepting superRate as a string.
 					while ((superRate = input.nextDouble()) < 0 || superRate > 50) {
 						System.out.println("Please enter a value between 0 and 50 inclusive!");
 						System.out.println("Please enter super rate:");
