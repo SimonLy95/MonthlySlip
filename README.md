@@ -19,5 +19,5 @@ A program that generates a monthly payment slip from the entered data. The sourc
 <br /> Instructions to run aws version:
 1. Would be a different repository
 2. A link would be provided if working
-3. Currently stuck on pipeline phase
+3. Currently stuck on pipeline phase, source > build working but not deploy.
 
