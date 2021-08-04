@@ -1,5 +1,5 @@
 # MonthlySlip
-A program that generates a monthly payment slip from the entered data. The source code and an executable will be provided. A version with encapsulation and working aws would be provided if they are completed. Please ignore the MonthlySlip.java.
+A program that generates a monthly payment slip from the entered data. The source code and an executable will be provided. A version with encapsulation and working aws would be provided if they are completed.
 
 <br /> Assumptions made:
 1. Names must only be letters and hyphens
@@ -39,7 +39,7 @@ A program that generates a monthly payment slip from the entered data. The sourc
 2. The executable version is running on old code. 
 3. If the user wants to store data into a database, JSON can be used.
 4. A GUI with labels, text fields and buttons could be added to give users an easier time to enter data.
-5. There are many ways to go with the dates, users can type monday, mon, 04/05, 5th of may, 23 APRIL 2022; asking the user to type month to generate the slip for entire month was done for simplicity.
+5. There are many ways to go with the dates, users can type monday, mon, 04/05, 5th of may, 23 APRIL 2020; asking the user to type month to generate the slip for entire month was done for simplicity.
 6. Payment period can use dates considering leap years with java.util.Date. A prompt could also be made to ask the day, the month, then the year for start date and end date.
 7. "Full Name:" "Income Tax:" was added for clarity.
 8. Encapsulation can be used for each individual field then call for every data at the end could be an option but a single class was used due to time constraints. 
