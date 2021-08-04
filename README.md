@@ -23,7 +23,7 @@ A program that generates a monthly payment slip from the entered data. The sourc
 3. Double click on the MonthlySlip.bat if you cannot execute the .Jar file
 
 <br /> Note: MonthlySlip version. Instructions to run the src file (MonthlySlipSimple/MonthlySlip):
-1. Download the entire package, a terminal can be used to download package or click code then download zip.
+1. Download the entire package, a terminal can be used to download package or click code (green button) then download zip.
 2. Open your IDE of choice
 3. Extract MonthlySlipSimple into source root (optional)
 4. Click file
