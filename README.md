@@ -1,7 +1,7 @@
 # MonthlySlip
 A program that generates a monthly payment slip from the entered data. The source code (EmployeeMonthlySlip.java) and a runnable MonthlySlip.exe would be provided, although; the executable may be the inferior version. Just double click on MonthlySlip.bat to run the program, if using the source code, run the program on the IDE of the users' choice. 
 
-<br /><br /> There are multiple versions of the program. One is an executable, one is java with a singular class (MonthlySlipSimple), one with encapsulation (MonthlySlip) and an AWS version. 
+<br /> There are multiple versions of the program. One is an executable, one is java with a singular class (MonthlySlipSimple), one with encapsulation (MonthlySlip) and an AWS version. 
 
 <br />Instructions to run the executable:
 1. Download the entire package
