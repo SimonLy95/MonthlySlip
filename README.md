@@ -38,7 +38,7 @@ A program that generates a monthly payment slip from the entered data. The sourc
 1. Made with eclipse and IntelliJ using Java version 16 and 11 depending on which file.
 2. The aws version is not working at the moment, currently trying to aws and spring. Currently stuck on pipeline phase, source > build working but not deploy.
 3. The executable version is running on old code. 
-4. If the user wants to store data into a database, JSON can be used.
+4. If the user wants to store data into a database, JSON can be an option.
 5. A GUI with labels, text fields and buttons could be added to give users an easier time to enter data.
 6. There are many ways to go with the dates, users can type monday, mon, 04/05, 5th of may, 23 APRIL 2020; asking the user to type month to generate the slip for entire month was done for simplicity.
 7. Payment period can use dates considering leap years with java.util.Date. A prompt could also be made to ask the day, the month, then the year for start date and end date.
