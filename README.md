@@ -45,5 +45,5 @@ A program that generates a monthly payment slip from the entered data. The sourc
 8. Encapsulation can be used for each individual field then call for every data at the end could be an option but a single class was used due to time constraints. 
 9. If the user wish to type %9 for super rate, the program could include superRate.replace("%","") then parse the string into a double.
 
-### <br />*Thank you for the oppurtunity, take care.*
+### <br />*Thank you for the opportunity, take care.*
 
