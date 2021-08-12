@@ -1,3 +1,5 @@
+//Notes need to change, multiple classes and make changes to the month threshold
+
 package main.java;
 // Made by Simon Ly.
 /*
@@ -7,6 +9,10 @@ Slips are generated for the entire month.
 Super rate is a double.
 Users may want to repeat for more than one person.
 */
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -24,16 +30,19 @@ public class EmployeeMonthlySlipSimple {
             // Defining Variables.
             String firstName;
             String lastName;
-            String paymentStartDate; // Can also use the date variable by importing java.util.date but we are using
-            // string for simplicity sake.
+            // string for simplicity's sake.
             String payPeriod; // Can also be date variable
             String yesOrNo;
+            String[] months = {"January","February","March","April","May","June","July","August","September","October","November","December"};
+            String fromDate;
+            String toDate;
+            int paymentMonth = 0; // Can also use the date variable by importing java.util.date but we are using
             int annualSalary = 0; // Can also be a double if cents are used.
             double tax;
             double grossIncome;
             double netIncome;
             double superRate = 0;
-            double supe;
+            double superAnnuation;
             boolean error; // For the do while try catch loop to stop errors from stopping the program.
 
             /*
@@ -119,14 +128,29 @@ public class EmployeeMonthlySlipSimple {
                 }
             } while (error);
 
-            supe = grossIncome * (superRate / 100);
+            superAnnuation = grossIncome * (superRate / 100);
 
             // Asks the user to input the date.
             // Can also use a function to ask the starting date and then the ending date and
             // also use a loop to only accept dates.
-            System.out.println("Please enter payment start date, please enter a month e.g (JAN or December): "); //Can prompt the user to enter the day, then the month.
+            //System.out.println("Please enter payment month: "); //Can prompt the user to enter the day, then the month.
             input.nextLine(); // consumes the next line
-            paymentStartDate = input.nextLine();
+
+
+            do {
+                error = false;
+                try {
+                    System.out.println("Please enter payment month (1-12):");
+                    while ((paymentMonth = input.nextInt()) < 0 || paymentMonth > 12) {
+                        System.out.println("Please enter a value between 1 and 12 inclusive!");
+                        System.out.println("Please enter payment month (1-12):");
+                    }
+                } catch (InputMismatchException e) {
+                    System.out.println("Please only enter numbers!(Between 1 and 12 inclusive)");
+                    error = true;
+                    input.next();
+                }
+            } while (error);
 
             // Switch can be used but switch case requires a constant expression
             /*
@@ -141,7 +165,7 @@ public class EmployeeMonthlySlipSimple {
              * assumption is made that the user would want to generate the payment slip for
              * the entire month.
              */
-            if (paymentStartDate.toLowerCase().contains("jan")) {
+          /*  if (paymentStartDate.toLowerCase().contains("jan")) {
                 payPeriod = "01 January - 31 January"; // Date can also be used.
             } else if (paymentStartDate.toLowerCase().contains("feb")) {
                 payPeriod = "01 February - 28 February"; // Can add something to consider leap years.
@@ -167,12 +191,21 @@ public class EmployeeMonthlySlipSimple {
                 payPeriod = "01 December - 31 December";
             } else {
                 payPeriod = paymentStartDate; // In case of special cases like 01/01/21 - 15/01/21, Monday ... etc
-            }
+            } */
 
+            fromDate = "01 " + months[paymentMonth-1];
+
+            Calendar cal = Calendar.getInstance();
+            cal.add(Calendar.MONTH, paymentMonth - 8);
+            cal.set(Calendar.DAY_OF_MONTH, cal.getActualMaximum(Calendar.DAY_OF_MONTH));
+            DateFormat df = new SimpleDateFormat("dd MMMM");
+            toDate = df.format(cal.getTime());
+
+            
             // Prints out all the entered and calculated value.
-            System.out.println("Full Name: " + firstName + " " + lastName + ", Pay period: " + payPeriod
+            System.out.println("Full Name: " + firstName + " " + lastName + ", Pay period: " + fromDate + " - " + toDate
                     + ", Gross Income: $" + Math.round(grossIncome) + ", Income Tax: $" + Math.round(tax)
-                    + ", Net Income: $" + Math.round(netIncome) + ", Super: $" + Math.round(supe) + "." + "\n");
+                    + ", Net Income: $" + Math.round(netIncome) + ", Super: $" + Math.round(superAnnuation) + "." + "\n");
 
             /*
              * Data can be stored into a database using JSON. "Employees:" { { "First Name"
