@@ -201,7 +201,7 @@ public class EmployeeMonthlySlipSimple {
             DateFormat df = new SimpleDateFormat("dd MMMM");
             toDate = df.format(cal.getTime());
 
-            
+
             // Prints out all the entered and calculated value.
             System.out.println("Full Name: " + firstName + " " + lastName + ", Pay period: " + fromDate + " - " + toDate
                     + ", Gross Income: $" + Math.round(grossIncome) + ", Income Tax: $" + Math.round(tax)
@@ -215,8 +215,9 @@ public class EmployeeMonthlySlipSimple {
             // quit ... etc. The user could also just exit the window.
             // Loop can be made to only accept yes or no.
             System.out.print("Would you like to generate another monthly slip? y/n?" + "\n");
+            input.next();
             yesOrNo = input.nextLine();
-            runAgain = yesOrNo.toLowerCase().contains("y");
+            runAgain = yesOrNo.toLowerCase().contains("y"); //Somehow stops working after changing pay period logic
         }
 
     }
